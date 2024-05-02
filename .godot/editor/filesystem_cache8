@@ -1,0 +1,25 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1714675178
+icon.svg::CompressedTexture2D::7571931319081012446::1714600968::1714600982::1::::<><>::
+README.md::TextFile::-1::1712433196::0::1::::<><>::
+::res://GDoukutsu/::1714675101
+::res://MyChar/::1714674434
+CameraOffset.gd::GDScript::-1::1714672202::0::1::::<>Marker2D<>::
+CharacterBody2D.gd::GDScript::-1::1714673434::0::1::::<>CharacterBody2D<>::
+MyChar.png::CompressedTexture2D::8660067571974277869::1714605235::1714605245::1::::<><>::
+my_char.tscn::PackedScene::7447273794897314290::1714674434::0::1::::<><>::res://MyChar/CharacterBody2D.gd<>uid://dvnabvdgbw3nd::::res://MyChar/MyChar.png<>uid://dne3eu3x6qeh8::::res://SFX/jump.wav<>res://MyChar/CameraOffset.gd<>uid://bmpdm1dy7rdtx::::res://SFX/thud.wav<>uid://sq8ii6wgqmpf::::res://SFX/walk.wav<>uid://cmvrhrhdg3f6x::::res://SFX/bonk.wav
+::res://New folder/::1714622728
+Pier Walk.ogg::AudioStreamOggVorbis::8770848464345511194::1714622629::1714675182::1::::<><>::
+::res://SFX/::1714621140
+bonk.wav::AudioStreamWAV::5659505017168225193::1606725104::1714620816::1::::<><>::
+death.wav::AudioStreamWAV::105802876484453334::1606725422::1714620816::1::::<><>::
+hurt.wav::AudioStreamWAV::4477699987367245718::1606725400::1714620816::1::::<><>::
+jump.wav::AudioStreamWAV::8081682843171645295::1606724666::1714620816::1::::<><>::
+thud.wav::AudioStreamWAV::3259857425540946673::1606725564::1714620816::1::::<><>::
+walk.wav::AudioStreamWAV::1298447645746050451::1606433026::1714621140::1::::<><>::
+::res://Stage/::1714674434
+bkGreen.png::CompressedTexture2D::3220146018116986541::1714603389::1714603397::1::::<><>::
+PrtEggs.png::CompressedTexture2D::2435247909799495357::1714601584::1714601585::1::::<><>::
+stage.gd::GDScript::-1::1714605068::0::1::::Stage<>Node2D<>::
+test_stage.tscn::PackedScene::5484323827911611618::1714673461::0::1::::<><>::uid://b4onu02o6hsnb::::res://Stage/ts_eggs.tres<>res://Stage/stage.gd<>uid://bl44lmvgpv7av::::res://Stage/bkGreen.png<>uid://dedrrnd1ih7fq::::res://MyChar/my_char.tscn<>uid://dw7wufii6nnxa::::res://BGM/Pier Walk.ogg
+ts_eggs.tres::TileSet::4451624830008230571::1714666720::0::1::::<><>::uid://baxwga627g6dl::::res://Stage/PrtEggs.png

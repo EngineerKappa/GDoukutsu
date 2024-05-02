@@ -1,0 +1,5 @@
+res://MyChar/my_char.tscn
+res://Stage/ts_eggs.tres
+res://Stage/CharacterBody2D.gd
+res://Stage/test_stage.tscn
+res://MyChar/CameraOffset.gd
