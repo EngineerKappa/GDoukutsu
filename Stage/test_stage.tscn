@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Stage/stage.gd" id="1_28ovy"]
 [ext_resource type="Texture2D" uid="uid://bl44lmvgpv7av" path="res://Stage/bkGreen.png" id="2_ctdpt"]
 [ext_resource type="PackedScene" uid="uid://dedrrnd1ih7fq" path="res://MyChar/my_char.tscn" id="4_lr8j0"]
-[ext_resource type="AudioStream" path="res://BGM/Pier Walk.ogg" id="10_i8hvr"]
+[ext_resource type="AudioStream" uid="uid://dw7wufii6nnxa" path="res://BGM/Pier Walk.ogg" id="10_i8hvr"]
 
 [node name="Stage" type="Node2D"]
 script = ExtResource("1_28ovy")

@@ -1,6 +1,6 @@
 extends Marker2D
 @onready var body = $".."
-@export var range = 48;
+@export var camera_range = 48;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,5 +10,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.x=move_toward(position.x,range*body.facing_direction.x,30 * delta)
+	position.x=move_toward(position.x,camera_range*body.facing_direction.x,30 * delta)
 	pass

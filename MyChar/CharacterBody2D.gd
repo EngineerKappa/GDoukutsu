@@ -53,7 +53,7 @@ var target_animation:String = "";
 
 #FX
 var landing_fx_enabled:bool = false;
-var floor:bool = true;
+var on_floor:bool = true;
 
 #endregion
 
@@ -72,13 +72,13 @@ func _ready():
 
 func _physics_process(delta):
 	if is_on_floor():
-		if !floor:
-			floor=true
+		if !on_floor:
+			on_floor=true
 			if landing_fx_enabled:
 				sfx_thud.play();
 			landing_fx_enabled=true;
 	else:
-		floor=false;
+		on_floor=false;
 		if Input.is_action_pressed("jump") && velocity.y<0:
 			velocity.y += gravity_jump * delta;
 		else:
@@ -108,7 +108,7 @@ func _physics_process(delta):
 		if !Input.is_action_pressed("strafe"):
 			facing_direction.x=input_direction.x
 		sprite.flip_h = (facing_direction.x<0)
-		if walk_timer.is_stopped() && floor:
+		if walk_timer.is_stopped() && on_floor:
 			walk_timer.start()
 			footstep();
 	else:
@@ -153,5 +153,5 @@ func _physics_process(delta):
 	move_and_slide()
 
 func footstep():
-	if floor && !sfx_thud.playing:
+	if on_floor && !sfx_thud.playing:
 		sfx_walk.play();
