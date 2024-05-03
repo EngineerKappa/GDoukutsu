@@ -1,9 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://dedrrnd1ih7fq"]
+[gd_scene load_steps=23 format=3 uid="uid://dedrrnd1ih7fq"]
 
+[ext_resource type="Script" path="res://MyChar/my_char.gd" id="1_4eksr"]
 [ext_resource type="Script" path="res://MyChar/CharacterBody2D.gd" id="1_no6ae"]
 [ext_resource type="Texture2D" uid="uid://dvnabvdgbw3nd" path="res://MyChar/MyChar.png" id="2_enqa6"]
 [ext_resource type="AudioStream" uid="uid://dne3eu3x6qeh8" path="res://SFX/jump.wav" id="3_66tma"]
 [ext_resource type="Script" path="res://MyChar/CameraOffset.gd" id="3_px6fk"]
+[ext_resource type="Script" path="res://MyChar/ActNormal.gd" id="3_uxva5"]
 [ext_resource type="AudioStream" uid="uid://bmpdm1dy7rdtx" path="res://SFX/thud.wav" id="4_8up7a"]
 [ext_resource type="AudioStream" uid="uid://sq8ii6wgqmpf" path="res://SFX/walk.wav" id="5_6enqr"]
 [ext_resource type="AudioStream" uid="uid://cmvrhrhdg3f6x" path="res://SFX/bonk.wav" id="6_k7g6n"]
@@ -149,10 +151,14 @@ slide_on_slope = true
 
 [node name="MyChar" type="Node2D"]
 position = Vector2(0, 7)
+script = ExtResource("1_4eksr")
 
 [node name="Body" type="CharacterBody2D" parent="."]
 collision_layer = 2
 script = ExtResource("1_no6ae")
+
+[node name="ActNormal" type="Node" parent="Body"]
+script = ExtResource("3_uxva5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Body"]
 position = Vector2(0, -8)

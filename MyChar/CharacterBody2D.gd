@@ -68,9 +68,8 @@ func _ready():
 	jump_buffer.one_shot=true
 	apply_floor_snap()
 	move_and_slide()
-	Engine.time_scale = 1.20;
 
-func _physics_process(delta):
+func apply_gravity(delta):
 	if is_on_floor():
 		if !on_floor:
 			on_floor=true
@@ -84,6 +83,9 @@ func _physics_process(delta):
 		else:
 			velocity.y += gravity_falling * delta;
 			
+	velocity.y=clamp(velocity.y,-max_velocity.y,max_velocity.y)
+
+func jump_check():
 	if Input.is_action_just_pressed("jump"):
 		jump_buffer.start();
 	# Handle jump.
@@ -91,18 +93,16 @@ func _physics_process(delta):
 		velocity.y = -jump_velocity
 		sfx_jump.play();
 		jump_buffer.stop();
+	
+	if is_on_ceiling():
+		sfx_bonk.play();
 		
-	
-	# Get the input input_direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	input_direction.x = Input.get_axis("move left", "move right")
-	input_direction.y = Input.get_axis("aim up", "aim down")
-	
+func aim_check():
 	facing_direction.y = input_direction.y;
 	if is_on_floor() && facing_direction.y == 1:
 		facing_direction.y=0;
-	
-	
+
+func move_horizontally(delta):
 	if input_direction.x!=0:
 		velocity.x = move_toward(velocity.x,max_speed*input_direction.x,acceleration * delta)
 		if !Input.is_action_pressed("strafe"):
@@ -113,13 +113,20 @@ func _physics_process(delta):
 			footstep();
 	else:
 		walk_timer.stop();
-		
-	##there's a condition to check for friction, I forget what it is
 
 	velocity.x = move_toward(velocity.x, 0, friction_normal * delta)
 	
+func _physics_process(delta):
+	jump_check();
+	apply_gravity(delta);
+	aim_check();
+	move_horizontally(delta)
+	
+	input_direction.x = Input.get_axis("move left", "move right")
+	input_direction.y = Input.get_axis("aim up", "aim down")
+
 	velocity.x=clamp(velocity.x,-max_velocity.x,max_velocity.x)
-	velocity.y=clamp(velocity.y,-max_velocity.y,max_velocity.y)
+	
 	
 	sprite_frame = sprite.frame
 	sprite_frame_progress = sprite.frame_progress
@@ -146,9 +153,6 @@ func _physics_process(delta):
 			sprite.frame = 3
 		else:
 			sprite.frame = 1
-	
-	if is_on_ceiling():
-		sfx_bonk.play();
 	
 	move_and_slide()
 
