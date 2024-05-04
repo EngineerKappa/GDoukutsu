@@ -8,6 +8,7 @@
 
 [node name="Stage" type="Node2D"]
 script = ExtResource("1_28ovy")
+map_name = "Test Room"
 bgm = "res://BGM/Pier Walk.ogg"
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -36,15 +37,3 @@ position = Vector2(126, 112)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_i8hvr")
 volume_db = -9.369
-
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="Control"]
-offset_right = 96.0
-offset_bottom = 23.0
-text = "Room Name"
-horizontal_alignment = 1

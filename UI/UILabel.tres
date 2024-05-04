@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://crj2ovgduq2di"]
+
+[ext_resource type="FontFile" uid="uid://dx51hhhrqtw4q" path="res://UI/cour.ttf" id="1_wbdyn"]
+
+[resource]
+font = ExtResource("1_wbdyn")
+shadow_color = Color(0, 0, 0, 1)

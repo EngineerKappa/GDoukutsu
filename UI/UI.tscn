@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://0eym6vhrk2ij"]
+
+[ext_resource type="Script" path="res://UI/UI.gd" id="1_net6a"]
+[ext_resource type="LabelSettings" uid="uid://crj2ovgduq2di" path="res://UI/UILabel.tres" id="2_jo6tq"]
+[ext_resource type="PackedScene" uid="uid://c6q384jflopfq" path="res://UI/screen_fade.tscn" id="4_tuv0s"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_net6a")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScreenFade" parent="CanvasLayer" instance=ExtResource("4_tuv0s")]
+
+[node name="MapName" type="Label" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -43.0
+offset_right = 64.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Map Name
+"
+label_settings = ExtResource("2_jo6tq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapNameTimer" type="Timer" parent="CanvasLayer/MapName"]
+wait_time = 3.2
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="CanvasLayer/MapName/MapNameTimer" to="." method="_on_map_name_timer_timeout"]

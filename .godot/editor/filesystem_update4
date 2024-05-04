@@ -14,3 +14,10 @@ res://Caret/head_bonk.tscn
 res://Caret/head_bonk.gd
 res://Stage/ParallaxBackground.gd
 res://Stage/stage.gd
+res://UI/UI.tscn
+res://UI/UI.gd
+res://UI/fade_sprite.tscn
+res://UI/fade_sprite.gd
+res://UI/ScreenFade.gd
+res://UI/screen_fade.tscn
+res://UI/UILabel.tres

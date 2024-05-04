@@ -1,19 +1,26 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1714798307
+::res://::1714862904
 icon.svg::CompressedTexture2D::7571931319081012446::1714600968::1714600982::1::::<><>::
+MadouFutoMaruGothic-d9Xo7.ttf::FontFile::7440624678302201503::1714852888::1714852883::1::::<><>::
 README.md::TextFile::-1::1714678547::0::1::::<><>::
 ::res://BGM/::1714678313
 Pier Walk.ogg::AudioStreamOggVorbis::8770848464345511194::1714622629::1714678313::1::::<><>::
-::res://Caret/::1714798381
+::res://Caret/::1714850363
 Caret.png::CompressedTexture2D::90948223909477178::1714798381::1714798429::1::::<><>::
-::res://MyChar/::1714797402
+caret.gd::GDScript::-1::1714849417::0::1::::Caret<>Node2D<>::
+QuestionMark.gd::GDScript::-1::1714846604::0::1::::<>Caret<>::
+caret.tscn::PackedScene::2665961336536765371::1714850363::0::1::::<><>::res://Caret/caret.gd
+QuestionMark.tscn::PackedScene::1370889134077553068::1714850363::0::1::::<><>::uid://bd8n81y2xwcbr::::res://Caret/caret.tscn<>uid://bkb5y8in3yoo::::res://Caret/Caret.png<>res://Caret/QuestionMark.gd
+head_bonk.tscn::PackedScene::1793890083917615974::1714850363::0::1::::<><>::uid://bd8n81y2xwcbr::::res://Caret/caret.tscn<>uid://bkb5y8in3yoo::::res://Caret/Caret.png<>res://Caret/head_bonk.gd
+head_bonk.gd::GDScript::-1::1714848839::0::1::::<>Caret<>::
+::res://MyChar/::1714850363
 ActNormal.gd::GDScript::-1::1714787591::0::1::::<>State<>::
 anim_quote.tres::SpriteFrames::8295585997379289145::1714781287::0::1::::<><>::uid://dvnabvdgbw3nd::::res://MyChar/MyChar.png
 CameraOffset.gd::GDScript::-1::1714793328::0::1::::<>Marker2D<>::
-CharacterBody2D.gd::GDScript::-1::1714797402::0::1::::MyChar<>CharacterBody2D<>::
+CharacterBody2D.gd::GDScript::-1::1714848140::0::1::::MyChar<>CharacterBody2D<>::
 MyChar.png::CompressedTexture2D::8660067571974277869::1714605235::1714605245::1::::<><>::
 my_char.gd::GDScript::-1::1714710221::0::1::::<>Node2D<>::
-my_char.tscn::PackedScene::7447273794897314290::1714797402::0::1::::<><>::res://MyChar/CharacterBody2D.gd<>res://Scripts/StateMachine.gd<>uid://dne3eu3x6qeh8::::res://SFX/jump.wav<>res://MyChar/ActNormal.gd<>res://MyChar/CameraOffset.gd<>uid://dqgpdbk4dwb6x::::res://MyChar/anim_quote.tres<>uid://bmpdm1dy7rdtx::::res://SFX/thud.wav<>uid://sq8ii6wgqmpf::::res://SFX/walk.wav<>uid://cmvrhrhdg3f6x::::res://SFX/bonk.wav
+my_char.tscn::PackedScene::7447273794897314290::1714850363::0::1::::<><>::res://MyChar/CharacterBody2D.gd<>res://Scripts/StateMachine.gd<>uid://dne3eu3x6qeh8::::res://SFX/jump.wav<>res://MyChar/ActNormal.gd<>res://MyChar/CameraOffset.gd<>uid://dqgpdbk4dwb6x::::res://MyChar/anim_quote.tres<>uid://bmpdm1dy7rdtx::::res://SFX/thud.wav<>uid://sq8ii6wgqmpf::::res://SFX/walk.wav<>uid://cmvrhrhdg3f6x::::res://SFX/bonk.wav
 ActInspect.gd::GDScript::-1::1714796257::0::1::::<>State<>::
 ::res://Scripts/::1714780908
 state.gd::GDScript::-1::1714780908::0::1::::State<>Node<>::
@@ -28,9 +35,22 @@ hurt.wav::AudioStreamWAV::4477699987367245718::1606725400::1714620816::1::::<><>
 jump.wav::AudioStreamWAV::8081682843171645295::1606724666::1714620816::1::::<><>::
 thud.wav::AudioStreamWAV::3259857425540946673::1606725564::1714620816::1::::<><>::
 walk.wav::AudioStreamWAV::1298447645746050451::1606433026::1714621140::1::::<><>::
-::res://Stage/::1714797402
+::res://Stage/::1714855716
 bkGreen.png::CompressedTexture2D::3220146018116986541::1714603389::1714603397::1::::<><>::
 PrtEggs.png::CompressedTexture2D::2435247909799495357::1714601584::1714601585::1::::<><>::
-stage.gd::GDScript::-1::1714706064::0::1::::Stage<>Node2D<>::
-test_stage.tscn::PackedScene::5484323827911611618::1714797402::0::1::::<><>::uid://b4onu02o6hsnb::::res://Stage/ts_eggs.tres<>res://Stage/stage.gd<>uid://bl44lmvgpv7av::::res://Stage/bkGreen.png<>uid://dedrrnd1ih7fq::::res://MyChar/my_char.tscn<>uid://dw7wufii6nnxa::::res://BGM/Pier Walk.ogg
+ParallaxBackground.gd::GDScript::-1::1714849764::0::1::::<>RefCounted<>::
+stage.gd::GDScript::-1::1714855300::0::1::::Stage<>Node2D<>::
+test_stage.tscn::PackedScene::5484323827911611618::1714855716::0::1::::<><>::uid://b4onu02o6hsnb::::res://Stage/ts_eggs.tres<>res://Stage/stage.gd<>uid://bl44lmvgpv7av::::res://Stage/bkGreen.png<>uid://dedrrnd1ih7fq::::res://MyChar/my_char.tscn<>uid://dw7wufii6nnxa::::res://BGM/Pier Walk.ogg
 ts_eggs.tres::TileSet::4451624830008230571::1714781287::0::1::::<><>::uid://baxwga627g6dl::::res://Stage/PrtEggs.png
+::res://UI/::1714863655
+cour.ttf::FontFile::8837128309016742330::1575713306::1714863658::1::::<><>::
+Fade.png::CompressedTexture2D::955242561845686796::1714855486::1714855488::1::::<><>::
+MadouFutoMaruGothic-d9Xo7.ttf::FontFile::4112981913504926959::1648046558::1714852874::1::::<><>::
+PressStart2P-vaV7.ttf::FontFile::4963186370685410053::1578020346::1714853066::1::::<><>::
+fade_sprite.tscn::PackedScene::8335516662127037110::1714863236::0::1::::<><>::uid://nuyx8qiywoxw::::res://UI/Fade.png<>res://UI/fade_sprite.gd
+fade_sprite.gd::GDScript::-1::1714862327::0::1::::<>AnimatedSprite2D<>::
+screen_fade.tscn::PackedScene::6983486108549323510::1714863236::0::1::::<><>::res://UI/ScreenFade.gd
+ScreenFade.gd::GDScript::-1::1714863195::0::1::::<>Control<>::
+UILabel.tres::LabelSettings::5986296581361526394::1714855047::0::1::::<><>::uid://ccyg7pjr3voaf::::res://UI/PressStart2P-vaV7.ttf
+UI.gd::GDScript::-1::1714862995::0::1::::<>Control<>::
+UI.tscn::PackedScene::1764458900326240005::1714863237::0::1::::<><>::res://UI/UI.gd<>uid://crj2ovgduq2di::::res://UI/UILabel.tres<>uid://c6q384jflopfq::::res://UI/screen_fade.tscn
