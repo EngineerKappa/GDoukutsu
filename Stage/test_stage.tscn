@@ -20,6 +20,7 @@ metadata/_edit_lock_ = true
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(448, 448)
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
@@ -35,3 +36,15 @@ position = Vector2(126, 112)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_i8hvr")
 volume_db = -9.369
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+offset_right = 96.0
+offset_bottom = 23.0
+text = "Room Name"
+horizontal_alignment = 1

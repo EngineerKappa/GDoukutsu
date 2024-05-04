@@ -12,3 +12,5 @@ res://Caret/QuestionMark.gd
 res://Caret/caret.tscn
 res://Caret/head_bonk.tscn
 res://Caret/head_bonk.gd
+res://Stage/ParallaxBackground.gd
+res://Stage/stage.gd
