@@ -10,3 +10,5 @@ res://Caret/caret.gd
 res://Caret/QuestionMark.tscn
 res://Caret/QuestionMark.gd
 res://Caret/caret.tscn
+res://Caret/head_bonk.tscn
+res://Caret/head_bonk.gd

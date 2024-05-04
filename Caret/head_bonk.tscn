@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://0s8dwm1nreb3"]
+
+[ext_resource type="PackedScene" uid="uid://bd8n81y2xwcbr" path="res://Caret/caret.tscn" id="1_crsho"]
+[ext_resource type="Texture2D" uid="uid://bkb5y8in3yoo" path="res://Caret/Caret.png" id="2_tdiqs"]
+[ext_resource type="Script" path="res://Caret/head_bonk.gd" id="2_w6h2f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v55d1"]
+atlas = ExtResource("2_tdiqs")
+region = Rect2(56, 24, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo4ml"]
+atlas = ExtResource("2_tdiqs")
+region = Rect2(96, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c0k70"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v55d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo4ml")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[node name="HeadBonk" instance=ExtResource("1_crsho")]
+script = ExtResource("2_w6h2f")
+
+[node name="Lifetime" parent="." index="0"]
+wait_time = 0.4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_c0k70")
+autoplay = "default"
+frame_progress = 0.27541

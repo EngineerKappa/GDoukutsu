@@ -8,7 +8,7 @@ class_name MyChar
 @onready var sfx_walk = $SFX/sfxWalk
 @onready var sfx_bonk = $SFX/sfxBonk
 const QUESTION_MARK = preload("res://Caret/QuestionMark.tscn")
-
+const HEAD_BONK = preload("res://Caret/head_bonk.tscn")
 #endregion
 
 #region Physics conversion functions
@@ -104,6 +104,10 @@ func jump_check():
 	
 	if is_on_ceiling():
 		sfx_bonk.play();
+		for i in range(2):
+			var instance=HEAD_BONK.instantiate();
+			add_child(instance)
+			instance.position=Vector2(position.x,position.y-16)
 		
 func aim_check():
 	facing_direction.y = input_direction.y;

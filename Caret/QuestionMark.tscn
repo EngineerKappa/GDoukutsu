@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bkb5y8in3yoo" path="res://Caret/Caret.png" id="2_8g6rt"]
 [ext_resource type="Script" path="res://Caret/QuestionMark.gd" id="3_e7sas"]
 
-[node name="Caret" instance=ExtResource("1_sbc7w")]
+[node name="QuestionMark" instance=ExtResource("1_sbc7w")]
+script = ExtResource("3_e7sas")
 velocity = Vector2(0, -200)
 
 [node name="Lifetime" parent="." index="0"]
@@ -14,4 +15,3 @@ wait_time = 0.7
 texture = ExtResource("2_8g6rt")
 region_enabled = true
 region_rect = Rect2(4, 84, 8, 9)
-script = ExtResource("3_e7sas")
