@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name MyChar
 
 #region Dependencies
-@onready var sprite = $AnimatedSprite2D
+@onready var sprite = $Sprite
 @onready var sfx_jump = $SFX/sfxJump
 @onready var sfx_thud = $SFX/sfxThud
 @onready var sfx_walk = $SFX/sfxWalk
@@ -57,6 +57,7 @@ var target_animation:String = "";
 #FX
 var landing_fx_enabled:bool = false;
 var on_floor:bool = true;
+var back:bool = false;
 
 #endregion
 
@@ -107,7 +108,11 @@ func jump_check():
 func aim_check():
 	facing_direction.y = input_direction.y;
 	if is_on_floor() && facing_direction.y == 1:
+		if input_direction.x==0:
+			back = true;
 		facing_direction.y=0;
+	if !on_floor or input_direction.x!=0 or input_direction.y==-1:
+		back = false;
 		
 func move_horizontally(delta):
 	if input_direction.x!=0:
@@ -137,6 +142,8 @@ func animate_normal():
 		target_animation = "walk_up"
 	elif facing_direction.y == 1:
 		target_animation = "aim_down"
+	if back:
+		target_animation = "back"
 	
 	if sprite.animation!=target_animation:
 		sprite.set_animation(target_animation)

@@ -5,3 +5,4 @@ res://MyChar/my_char.tscn
 res://MyChar/ActNormal.gd
 res://MyChar/CharacterBody2D.gd
 res://MyChar/CameraOffset.gd
+res://MyChar/ActInspect.gd
