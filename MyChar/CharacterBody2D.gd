@@ -7,7 +7,7 @@ class_name MyChar
 @onready var sfx_thud = $SFX/sfxThud
 @onready var sfx_walk = $SFX/sfxWalk
 @onready var sfx_bonk = $SFX/sfxBonk
-
+const QUESTION_MARK = preload("res://Caret/QuestionMark.tscn")
 
 #endregion
 
@@ -109,7 +109,11 @@ func aim_check():
 	facing_direction.y = input_direction.y;
 	if is_on_floor() && facing_direction.y == 1:
 		if input_direction.x==0:
-			back = true;
+			if !back:
+				var instance=QUESTION_MARK.instantiate();
+				add_child(instance)
+				instance.position=position;
+				back = true;
 		facing_direction.y=0;
 	if !on_floor or input_direction.x!=0 or input_direction.y==-1:
 		back = false;

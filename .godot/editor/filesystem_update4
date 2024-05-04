@@ -6,3 +6,7 @@ res://MyChar/ActNormal.gd
 res://MyChar/CharacterBody2D.gd
 res://MyChar/CameraOffset.gd
 res://MyChar/ActInspect.gd
+res://Caret/caret.gd
+res://Caret/QuestionMark.tscn
+res://Caret/QuestionMark.gd
+res://Caret/caret.tscn
