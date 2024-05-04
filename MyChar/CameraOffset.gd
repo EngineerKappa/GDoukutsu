@@ -13,6 +13,6 @@ func _process(delta):
 	position.x=move_toward(position.x,camera_offset.x+camera_range*owner.facing_direction.x,50 * delta)
 	position.y=move_toward(position.y,camera_offset.y+camera_range*owner.input_direction.y,50 * delta)
 	
-	camera.global_position.x=lerp(camera.global_position.x,global_position.x,10 * delta)
-	camera.global_position.y=lerp(camera.global_position.y,global_position.y,5 * delta)
+	camera.global_position.x=lerp(camera.global_position.x,global_position.x,5 * delta)
+	camera.global_position.y=lerp(camera.global_position.y,global_position.y,3 * delta)
 	pass

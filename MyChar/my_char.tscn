@@ -82,6 +82,7 @@ position = Vector2(55, -7)
 gizmo_extents = 3.0
 script = ExtResource("3_px6fk")
 camera_range = 64
+camera_offset = Vector2(0, -8)
 
 [node name="SFX" type="Node" parent="."]
 

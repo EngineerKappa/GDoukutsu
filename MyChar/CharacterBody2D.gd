@@ -38,16 +38,16 @@ var jump_buffer : Timer = Timer.new();
 var input_direction = Vector2(0,0)
 
 #Horizontal Movement
-var max_speed:float = cs_velocity(0x32C);
-var acceleration:float = cs_acceleration(0x200 / 6);
-var friction_normal:float = cs_acceleration(0x200 / 10);
+var max_speed:float = cs_velocity(812.00);
+var acceleration:float = cs_acceleration(85.3333);
+var friction_normal:float = cs_acceleration(51.2);
 
 #Vertical Movement
-var jump_velocity : float = cs_velocity(0x500);
-var gravity_falling : float = cs_acceleration(0x50)
-var gravity_jump : float = cs_acceleration(0x20)
+var jump_velocity : float = cs_velocity(1280);
+var gravity_falling : float = cs_acceleration(80)
+var gravity_jump : float = cs_acceleration(32)
 
-var max_velocity = Vector2(cs_velocity(0x5FF),cs_velocity(0x5FF))
+var max_velocity = Vector2(cs_velocity(1535),cs_velocity(1535))
 
 #Animation 
 var sprite_frame:int = 0;
@@ -72,7 +72,7 @@ func _ready():
 	apply_floor_snap()
 	move_and_slide()
 
-func _process(delta):
+func _process(_delta):
 	input_direction.x = Input.get_axis("move left", "move right")
 	input_direction.y = Input.get_axis("aim up", "aim down")
 
