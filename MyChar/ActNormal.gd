@@ -1,10 +1,23 @@
 extends State
+@export var body:CharacterBody2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func handle_input(_event: InputEvent) -> void:
+	pass
+	
+func update(_delta: float) -> void:
+	pass
+	
+func physics_update(_delta: float) -> void:
+	owner.jump_check();
+	owner.aim_check();
+	owner.apply_gravity(_delta);
+	owner.move_horizontally(_delta)
+	owner.animate_normal();
+	owner.move_and_slide()
+	pass
 
+func enter(_msg := {}) -> void:
+	pass
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func exit() -> void:
 	pass

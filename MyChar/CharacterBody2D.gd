@@ -1,11 +1,14 @@
 extends CharacterBody2D
+class_name MyChar
 
 #region Dependencies
 @onready var sprite = $AnimatedSprite2D
-@onready var sfx_jump = $"../SFX/sfxJump"
-@onready var sfx_thud = $"../SFX/sfxThud"
-@onready var sfx_walk = $"../SFX/sfxWalk"
-@onready var sfx_bonk = $"../SFX/sfxBonk"
+@onready var sfx_jump = $SFX/sfxJump
+@onready var sfx_thud = $SFX/sfxThud
+@onready var sfx_walk = $SFX/sfxWalk
+@onready var sfx_bonk = $SFX/sfxBonk
+
+
 #endregion
 
 #region Physics conversion functions
@@ -31,7 +34,7 @@ var walk_timer : Timer = Timer.new();
 var jump_buffer : Timer = Timer.new();
 
 #Inputs
-var facing_direction = Vector2(1,0)
+@export var facing_direction = Vector2(1,0)
 var input_direction = Vector2(0,0)
 
 #Horizontal Movement
@@ -69,6 +72,10 @@ func _ready():
 	apply_floor_snap()
 	move_and_slide()
 
+func _process(delta):
+	input_direction.x = Input.get_axis("move left", "move right")
+	input_direction.y = Input.get_axis("aim up", "aim down")
+
 func apply_gravity(delta):
 	if is_on_floor():
 		if !on_floor:
@@ -101,7 +108,7 @@ func aim_check():
 	facing_direction.y = input_direction.y;
 	if is_on_floor() && facing_direction.y == 1:
 		facing_direction.y=0;
-
+		
 func move_horizontally(delta):
 	if input_direction.x!=0:
 		velocity.x = move_toward(velocity.x,max_speed*input_direction.x,acceleration * delta)
@@ -115,19 +122,13 @@ func move_horizontally(delta):
 		walk_timer.stop();
 
 	velocity.x = move_toward(velocity.x, 0, friction_normal * delta)
-	
-func _physics_process(delta):
-	jump_check();
-	apply_gravity(delta);
-	aim_check();
-	move_horizontally(delta)
-	
-	input_direction.x = Input.get_axis("move left", "move right")
-	input_direction.y = Input.get_axis("aim up", "aim down")
-
 	velocity.x=clamp(velocity.x,-max_velocity.x,max_velocity.x)
-	
-	
+
+func footstep():
+	if on_floor && !sfx_thud.playing:
+		sfx_walk.play();
+
+func animate_normal():
 	sprite_frame = sprite.frame
 	sprite_frame_progress = sprite.frame_progress
 	if facing_direction.y == 0:
@@ -153,9 +154,3 @@ func _physics_process(delta):
 			sprite.frame = 3
 		else:
 			sprite.frame = 1
-	
-	move_and_slide()
-
-func footstep():
-	if on_floor && !sfx_thud.playing:
-		sfx_walk.play();

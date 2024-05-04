@@ -1,4 +1,6 @@
 Node
+State
+StateMachine
 Marker2D
 Camera2D
 Timer
@@ -10,5 +12,3 @@ AnimatedSprite2D
 CharacterBody2D
 TextureRect
 ParallaxLayer
-ParallaxBackground
-TileMap

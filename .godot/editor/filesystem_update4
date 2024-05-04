@@ -1,8 +1,7 @@
 res://Stage/test_stage.tscn
 res://Stage/ts_eggs.tres
-res://Stage/stage.gd
-res://MyChar/CharacterBody2D.gd
+res://MyChar/anim_quote.tres
 res://MyChar/my_char.tscn
-res://MyChar/my_char.gd
 res://MyChar/ActNormal.gd
-res://Scripts/state.gd
+res://MyChar/CharacterBody2D.gd
+res://MyChar/CameraOffset.gd
