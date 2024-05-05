@@ -22,8 +22,3 @@ func _ready():
 			_pos.x=0;
 			_pos.y+=16;
 	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

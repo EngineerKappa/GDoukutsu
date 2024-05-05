@@ -1,4 +1,8 @@
+Marker2D
 AnimatedSprite2D
+AudioStreamPlayer
+Node2D
+Node
 TextureRect
 GridContainer
 Timer
@@ -7,8 +11,5 @@ Control
 Label
 Sprite2D
 Caret
-Node2D
 CPUParticles2D
-Node
 State
-StateMachine

@@ -107,20 +107,22 @@ func jump_check():
 		for i in range(2):
 			var instance=HEAD_BONK.instantiate();
 			add_child(instance)
-			instance.position=Vector2(position.x,position.y-16)
+			instance.position=Vector2(position.x,position.y-8)
 		
 func aim_check():
 	facing_direction.y = input_direction.y;
-	if is_on_floor() && facing_direction.y == 1:
-		if input_direction.x==0:
-			if !back:
-				var instance=QUESTION_MARK.instantiate();
-				add_child(instance)
-				instance.position=position;
-				back = true;
+	if on_floor && facing_direction.y == 1:
 		facing_direction.y=0;
 	if !on_floor or input_direction.x!=0 or input_direction.y==-1:
 		back = false;
+		
+		
+	if input_direction.x==0:
+		if Input.is_action_just_pressed("interact") && !back && on_floor:
+			var instance=QUESTION_MARK.instantiate();
+			add_child(instance)
+			instance.position=position;
+			back = true;
 		
 func move_horizontally(delta):
 	if input_direction.x!=0:
@@ -156,7 +158,7 @@ func animate_normal():
 	if sprite.animation!=target_animation:
 		sprite.set_animation(target_animation)
 		sprite.set_frame_and_progress(sprite_frame,sprite_frame_progress)
-	
+		
 	if is_on_floor():
 		if abs(velocity.x)>0 && input_direction.x !=0:
 			sprite.speed_scale = 1;

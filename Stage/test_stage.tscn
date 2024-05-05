@@ -32,7 +32,7 @@ stretch_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="MyChar" parent="." instance=ExtResource("4_lr8j0")]
-position = Vector2(126, 112)
+position = Vector2(121, 104)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_i8hvr")
