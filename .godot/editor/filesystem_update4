@@ -17,3 +17,5 @@ res://Bullet/BulPolar1.tscn
 res://Caret/CarShotCollide.tscn
 res://Caret/QuestionMark.tscn
 res://Caret/QuestionMark.gd
+res://Caret/CarQuestion.tscn
+res://MyChar/CameraOffset.gd

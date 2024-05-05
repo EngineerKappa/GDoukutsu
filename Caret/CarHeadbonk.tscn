@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bd8n81y2xwcbr" path="res://Caret/caret.tscn" id="1_crsho"]
 [ext_resource type="Texture2D" uid="uid://bkb5y8in3yoo" path="res://Caret/Caret.png" id="2_tdiqs"]
-[ext_resource type="Script" path="res://Caret/head_bonk.gd" id="2_w6h2f"]
+[ext_resource type="Script" path="res://Caret/CarHeadbonk.gd" id="2_w6h2f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v55d1"]
 atlas = ExtResource("2_tdiqs")

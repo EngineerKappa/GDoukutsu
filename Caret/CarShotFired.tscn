@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://cqlhbkih5k0m4"]
 
 [ext_resource type="PackedScene" uid="uid://bd8n81y2xwcbr" path="res://Caret/caret.tscn" id="1_as5ku"]
-[ext_resource type="Script" path="res://ShotFired.gd" id="2_poi1o"]
+[ext_resource type="Script" path="res://Caret/CarShotFired.gd" id="2_ky3n1"]
 [ext_resource type="Texture2D" uid="uid://bkb5y8in3yoo" path="res://Caret/Caret.png" id="3_lt2l2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ve5vy"]
@@ -48,7 +48,7 @@ animations = [{
 }]
 
 [node name="ShotFired" instance=ExtResource("1_as5ku")]
-script = ExtResource("2_poi1o")
+script = ExtResource("2_ky3n1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="1"]
 sprite_frames = SubResource("SpriteFrames_a8sua")

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://tsclxmx7ww7e"]
+
+[ext_resource type="PackedScene" uid="uid://bd8n81y2xwcbr" path="res://Caret/caret.tscn" id="1_n8dh0"]
+[ext_resource type="Script" path="res://Caret/CarQuestion.gd" id="2_44lmr"]
+[ext_resource type="Texture2D" uid="uid://bkb5y8in3yoo" path="res://Caret/Caret.png" id="3_01j7k"]
+
+[node name="QuestionMark" instance=ExtResource("1_n8dh0")]
+script = ExtResource("2_44lmr")
+velocity = Vector2(0, -200)
+
+[node name="Lifetime" parent="." index="0"]
+wait_time = 0.7
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_01j7k")
+region_enabled = true
+region_rect = Rect2(4, 84, 8, 9)

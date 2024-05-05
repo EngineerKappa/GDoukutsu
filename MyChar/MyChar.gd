@@ -7,8 +7,8 @@ class_name MyChar
 @onready var sfx_thud = $SFX/sfxThud
 @onready var sfx_walk = $SFX/sfxWalk
 @onready var sfx_bonk = $SFX/sfxBonk
-const QUESTION_MARK = preload("res://Caret/QuestionMark.tscn")
-const HEAD_BONK = preload("res://Caret/head_bonk.tscn")
+const QUESTION_MARK = preload("res://Caret/CarQuestion.tscn")
+const HEAD_BONK = preload("res://Caret/CarHeadbonk.tscn")
 #endregion
 
 #region Physics conversion functions

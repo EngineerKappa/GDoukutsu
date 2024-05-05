@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://dedrrnd1ih7fq"]
 
-[ext_resource type="Script" path="res://MyChar/CharacterBody2D.gd" id="1_no6ae"]
+[ext_resource type="Script" path="res://MyChar/MyChar.gd" id="1_no6ae"]
 [ext_resource type="Script" path="res://Scripts/StateMachine.gd" id="2_24dq8"]
 [ext_resource type="Texture2D" uid="uid://doccyyc3nx14j" path="res://MyChar/Arms.png" id="2_i65us"]
 [ext_resource type="Script" path="res://MyChar/Arms.gd" id="3_1wstj"]
