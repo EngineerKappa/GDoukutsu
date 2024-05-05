@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctgfvpvin0g5t"]
+
+[ext_resource type="PackedScene" uid="uid://cqlhbkih5k0m4" path="res://Caret/CarShotFired.tscn" id="1_n1i7m"]
+[ext_resource type="Texture2D" uid="uid://bkb5y8in3yoo" path="res://Caret/Caret.png" id="2_6maxv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3ito"]
+atlas = ExtResource("2_6maxv")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_em408"]
+atlas = ExtResource("2_6maxv")
+region = Rect2(192, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s88o"]
+atlas = ExtResource("2_6maxv")
+region = Rect2(208, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yimaa"]
+atlas = ExtResource("2_6maxv")
+region = Rect2(224, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr2ym"]
+atlas = ExtResource("2_6maxv")
+region = Rect2(304, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0knev"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3ito")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_em408")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s88o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yimaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr2ym")
+}],
+"loop": false,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="ShotFired" instance=ExtResource("1_n1i7m")]
+
+[node name="AnimatedSprite2D" parent="." index="1"]
+sprite_frames = SubResource("SpriteFrames_0knev")
+frame = 0
+frame_progress = 0.0

@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://babmann1qj58u"]
+
+[ext_resource type="PackedScene" uid="uid://86w7sukg3ku6" path="res://Bullet/Bullet.tscn" id="1_akepy"]
+[ext_resource type="Texture2D" uid="uid://dr5rucd1vwvsg" path="res://Bullet/Bullet.png" id="2_o321t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxbke"]
+atlas = ExtResource("2_o321t")
+region = Rect2(127, 38, 18, 4)
+
+[node name="Bullet" instance=ExtResource("1_akepy")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(7, 0)
+texture = SubResource("AtlasTexture_qxbke")

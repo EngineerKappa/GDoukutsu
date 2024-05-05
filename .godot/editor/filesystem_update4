@@ -10,3 +10,10 @@ res://ShotFired.gd
 res://Caret/CarShotFired.tscn
 res://UI/ScreenFade.gd
 res://UI/UI.gd
+res://Bullet/Bullet.tscn
+res://Bullet/Bullet.gd
+res://Caret/caret.tscn
+res://Bullet/BulPolar1.tscn
+res://Caret/CarShotCollide.tscn
+res://Caret/QuestionMark.tscn
+res://Caret/QuestionMark.gd

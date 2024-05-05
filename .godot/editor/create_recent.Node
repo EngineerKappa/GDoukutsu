@@ -1,3 +1,6 @@
+ShapeCast2D
+RayCast2D
+Sprite2D
 Marker2D
 AnimatedSprite2D
 AudioStreamPlayer
@@ -9,7 +12,4 @@ Timer
 CanvasLayer
 Control
 Label
-Sprite2D
 Caret
-CPUParticles2D
-State
